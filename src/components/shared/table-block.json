@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_shared_table_blocks",
+  "info": { "displayName": "Table Block", "icon": "grid" },
+  "options": {},
+  "attributes": {
+    "caption": { "type": "string" },
+    "columns": { "type": "json" },
+    "rows": { "type": "json" }
+  }
+}

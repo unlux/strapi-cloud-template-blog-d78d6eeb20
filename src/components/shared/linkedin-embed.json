@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_shared_linkedin_embeds",
+  "info": { "displayName": "LinkedIn Embed", "icon": "link" },
+  "options": {},
+  "attributes": {
+    "url": { "type": "string", "required": true },
+    "title": { "type": "string" },
+    "fallbackText": { "type": "text" },
+    "fallbackImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_shared_youtube_embeds",
+  "info": { "displayName": "YouTube Embed", "icon": "play" },
+  "options": {},
+  "attributes": {
+    "url": { "type": "string", "required": true },
+    "title": { "type": "string" },
+    "posterImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "allowAutoplay": { "type": "boolean", "default": false }
+  }
+}

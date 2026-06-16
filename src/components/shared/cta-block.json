@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_shared_cta_blocks",
+  "info": { "displayName": "CTA Block", "icon": "cursor" },
+  "options": {},
+  "attributes": {
+    "preset": { "type": "relation", "relation": "oneToOne", "target": "api::cta-preset.cta-preset" },
+    "heading": { "type": "string" },
+    "body": { "type": "text" },
+    "buttonLabelOverride": { "type": "string" }
+  }
+}

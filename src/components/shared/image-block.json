@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_image_blocks",
+  "info": { "displayName": "Image Block", "icon": "picture" },
+  "options": {},
+  "attributes": {
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "altText": { "type": "string" },
+    "caption": { "type": "string" },
+    "credit": { "type": "string" },
+    "objectPosition": { "type": "string" },
+    "decorative": { "type": "boolean", "default": false }
+  }
+}

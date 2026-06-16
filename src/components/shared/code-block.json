@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_shared_code_blocks",
+  "info": { "displayName": "Code Block", "icon": "code" },
+  "options": {},
+  "attributes": {
+    "language": { "type": "string" },
+    "code": { "type": "text", "required": true },
+    "caption": { "type": "string" }
+  }
+}

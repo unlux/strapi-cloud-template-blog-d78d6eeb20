@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": { "singularName": "case-study", "pluralName": "case-studies", "displayName": "Case Study" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "canonicalPath": { "type": "string", "required": true },
+    "clientName": { "type": "string" },
+    "industry": { "type": "string" },
+    "summary": { "type": "text" },
+    "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "seo": { "type": "component", "repeatable": false, "component": "shared.seo" },
+    "legacyPaths": { "type": "json" },
+    "categories": { "type": "relation", "relation": "manyToMany", "target": "api::category.category" },
+    "tags": { "type": "relation", "relation": "manyToMany", "target": "api::tag.tag" },
+    "proofMetrics": { "type": "component", "repeatable": true, "component": "shared.proof-metric" },
+    "testimonial": { "type": "component", "repeatable": false, "component": "shared.testimonial" },
+    "problem": { "type": "dynamiczone", "components": ["shared.rich-text", "shared.image-block", "shared.youtube-embed", "shared.linkedin-embed", "shared.code-block", "shared.table-block", "shared.cta-block"] },
+    "solution": { "type": "dynamiczone", "components": ["shared.rich-text", "shared.image-block", "shared.youtube-embed", "shared.linkedin-embed", "shared.code-block", "shared.table-block", "shared.cta-block"] },
+    "results": { "type": "dynamiczone", "components": ["shared.rich-text", "shared.image-block", "shared.youtube-embed", "shared.linkedin-embed", "shared.code-block", "shared.table-block", "shared.cta-block"] }
+  }
+}
