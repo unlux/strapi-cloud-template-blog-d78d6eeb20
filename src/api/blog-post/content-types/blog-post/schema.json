@@ -12,7 +12,7 @@
     "readingTimeMinutes": { "type": "integer" },
     "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
     "seo": { "type": "component", "repeatable": false, "component": "shared.seo" },
-    "legacyPaths": { "type": "json" },
+    "legacyPaths": { "type": "component", "repeatable": true, "component": "shared.legacy-path" },
     "categories": { "type": "relation", "relation": "manyToMany", "target": "api::category.category" },
     "tags": { "type": "relation", "relation": "manyToMany", "target": "api::tag.tag" },
     "body": { "type": "dynamiczone", "components": ["shared.rich-text", "shared.image-block", "shared.youtube-embed", "shared.linkedin-embed", "shared.code-block", "shared.table-block", "shared.cta-block"] }

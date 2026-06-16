@@ -43,6 +43,17 @@ export interface SharedImageBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLegacyPath extends Struct.ComponentSchema {
+  collectionName: 'components_shared_legacy_paths';
+  info: {
+    displayName: 'Legacy Path';
+    icon: 'link';
+  };
+  attributes: {
+    path: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedLinkedinEmbed extends Struct.ComponentSchema {
   collectionName: 'components_shared_linkedin_embeds';
   info: {
@@ -178,6 +189,7 @@ declare module '@strapi/strapi' {
       'shared.code-block': SharedCodeBlock;
       'shared.cta-block': SharedCtaBlock;
       'shared.image-block': SharedImageBlock;
+      'shared.legacy-path': SharedLegacyPath;
       'shared.linkedin-embed': SharedLinkedinEmbed;
       'shared.media': SharedMedia;
       'shared.proof-metric': SharedProofMetric;

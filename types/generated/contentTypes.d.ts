@@ -472,7 +472,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     excerpt: Schema.Attribute.Text;
-    legacyPaths: Schema.Attribute.JSON;
+    legacyPaths: Schema.Attribute.Component<'shared.legacy-path', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -514,7 +514,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     industry: Schema.Attribute.String;
-    legacyPaths: Schema.Attribute.JSON;
+    legacyPaths: Schema.Attribute.Component<'shared.legacy-path', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -671,7 +671,7 @@ export interface ApiResourceResource extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     file: Schema.Attribute.Media<'files'>;
-    legacyPaths: Schema.Attribute.JSON;
+    legacyPaths: Schema.Attribute.Component<'shared.legacy-path', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -739,7 +739,7 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    legacyPaths: Schema.Attribute.JSON;
+    legacyPaths: Schema.Attribute.Component<'shared.legacy-path', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::video.video'> &
       Schema.Attribute.Private;

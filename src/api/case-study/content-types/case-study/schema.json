@@ -12,7 +12,7 @@
     "summary": { "type": "text" },
     "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
     "seo": { "type": "component", "repeatable": false, "component": "shared.seo" },
-    "legacyPaths": { "type": "json" },
+    "legacyPaths": { "type": "component", "repeatable": true, "component": "shared.legacy-path" },
     "categories": { "type": "relation", "relation": "manyToMany", "target": "api::category.category" },
     "tags": { "type": "relation", "relation": "manyToMany", "target": "api::tag.tag" },
     "proofMetrics": { "type": "component", "repeatable": true, "component": "shared.proof-metric" },

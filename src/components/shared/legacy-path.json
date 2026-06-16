@@ -1,0 +1,8 @@
+{
+  "collectionName": "components_shared_legacy_paths",
+  "info": { "displayName": "Legacy Path", "icon": "link" },
+  "options": {},
+  "attributes": {
+    "path": { "type": "string", "required": true }
+  }
+}
