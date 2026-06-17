@@ -13,25 +13,6 @@ module.exports = ({ env }) => {
   const endpoint = env("AWS_ENDPOINT");
   const bucket = env("AWS_BUCKET");
 
-  // TEMP DIAGNOSTIC — logs credential *presence* (never the secret values) plus
-  // the non-secret config so the Strapi Cloud boot log shows exactly what's set
-  // and which provider was chosen. Remove once R2 uploads are confirmed.
-  console.info(
-    "[r2-upload-check] " +
-      JSON.stringify({
-        AWS_ACCESS_KEY_ID: Boolean(accessKeyId),
-        AWS_ACCESS_SECRET: Boolean(secretAccessKey),
-        AWS_ENDPOINT: endpoint || null,
-        AWS_BUCKET: bucket || null,
-        AWS_REGION: env("AWS_REGION") || null,
-        CDN_URL: env("CDN_URL") || null,
-        provider:
-          accessKeyId && secretAccessKey && endpoint && bucket
-            ? "aws-s3"
-            : "LOCAL-FALLBACK",
-      }),
-  );
-
   if (!accessKeyId || !secretAccessKey || !endpoint || !bucket) {
     return {};
   }
